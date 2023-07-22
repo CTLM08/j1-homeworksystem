@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import Navbar from "./components/Navbar";
 import Login from "./pages/login";
+import Footer from "./components/Footer";
 const App = () => {
   return (
-    <div className="h-screen w-full bg-zinc-900 flex flex-col overflow-y-auto">
+    <div className="min-h-screen w-full bg-zinc-900 flex flex-col relative">
       <Navbar />
-      <div className="h-16"></div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
+      <main className="mt-16">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </main>
+
+      <Footer />
     </div>
   );
 };
