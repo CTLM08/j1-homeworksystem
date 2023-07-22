@@ -2,10 +2,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: 'MiSans';
-  src: url(Misans-Bold.ttf);
-}
 *{
   font-family: 'MiSans';
 }

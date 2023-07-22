@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../assets/logo.png";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 const Navvnar = () => {
+  const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    window.onscroll = () => setIsTop(window.scrollY < 100);
+  }, []);
+
   return (
-    <div className="hover:bg-[#7289da]  fixed transition-all justify-between w-full h-20 flex items-center  text-white p-5">
-      <div className="flex flex-row gap-3 items-center w-80%">
+    <nav
+      className={`fixed transition-all justify-between w-full h-20 flex items-center  text-white p-8 ${
+        isTop ? "py-12" : "bg-[#7289da] py-8"
+      }`}
+    >
+      <div className="flex flex-row gap-3 items-center w-80% font-bold">
         <img src={Logo} className="w-16 h-16" />
         初一新生作业缴交系统
         <p>·</p>
@@ -20,13 +30,13 @@ const Navvnar = () => {
 
       <div className="flex flex-row gap-3 items-center">
         <Link to="/login">
-          <div className="hover:bg-white hover:text-zinc-800 w-20 flex flex-row gap-2 justify-center items-center  rounded-md p-2 transition-all">
+          <div className="hover:bg-white hover:text-zinc-800 w-22  font-semibold flex flex-row gap-2 justify-center items-center  rounded-md p-3 transition-all">
             登录
-            <Icon icon="maki:arrow" />
+            <Icon icon="uil:arrow-right" className="w-6 h-6" />
           </div>
         </Link>
       </div>
-    </div>
+    </nav>
   );
 };
 

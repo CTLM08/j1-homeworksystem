@@ -17,24 +17,25 @@ const Login = () => {
             <Icon icon="humbleicons:user" />
           </button>
           <input
-            className="outline-none rounded-md p-1 w-full bg-zinc-700 ml-2 text-center text-white/60  "
+            className="outline-none rounded-md p-1 w-full bg-zinc-700 ml-2 text-center text-white/60 font-semibold "
             placeholder="学校账号"
           />
         </div>
         <div className="w-full flex flex-row relatvie items-center mt-5">
-          <button className="absolute flex justify-center items-center bg-gray-200/60 rounded-full shadow-md w-10 h-10">
+          <button className="absolute flex justify-center items-center bg-gray-200/60 rounded-full shadow-md w-10 h-10 ">
             <Icon icon="clarity:lock-solid" />
           </button>
           <input
-            className="outline-none rounded-md p-1 w-full bg-zinc-700 ml-2 text-center text-white/60  "
+            className="outline-none rounded-md p-1 w-full bg-zinc-700 ml-2 text-center text-white/60 font-semibold "
             placeholder="密码"
           />
         </div>
         <div className="w-full h-8"></div>
-        <button className="bg-zinc-700 rounded-md p-3 text-white w-full flex flex-row items-center justify-center gap-5">
+        <button className=" rounded-md font-semibold bg-[#7289da] mt-4    p-3 text-white w-full flex flex-row items-center justify-center gap-5">
           登录
           <Icon icon="maki:arrow" />
         </button>
+        <div className="h-4" />
       </div>
     </div>
   );
