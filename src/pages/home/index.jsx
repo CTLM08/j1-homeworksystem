@@ -31,7 +31,7 @@ const Home = () => {
             </button>
           </div>
         ))}
-      <div className="h-44"></div>
+      <div className="h-56"></div>
     </div>
   );
 };

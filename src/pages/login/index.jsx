@@ -28,6 +28,7 @@ const Login = () => {
           <input
             className="outline-none rounded-md p-1 w-full bg-zinc-700 ml-2 text-center text-white/60 font-semibold "
             placeholder="密码"
+            type="password"
           />
         </div>
         <div className="w-full h-8"></div>
