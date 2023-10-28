@@ -3,13 +3,13 @@ import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAuwFSvturmJDyoLbNU8yjSFE1VowI_5YQ",
-  authDomain: "liming-blog.firebaseapp.com",
-  projectId: "liming-blog",
-  storageBucket: "liming-blog.appspot.com",
-  messagingSenderId: "726892295623",
-  appId: "1:726892295623:web:1aef885f24ca4cea79d5e2",
-  measurementId: "G-0LLYX4HXT7",
+  apiKey: "AIzaSyCqdSBSoGfxs-pNa3TD9-HybPhqKHJCr-I",
+  authDomain: "junior1-homework-system.firebaseapp.com",
+  projectId: "junior1-homework-system",
+  storageBucket: "junior1-homework-system.appspot.com",
+  messagingSenderId: "155170471475",
+  appId: "1:155170471475:web:655bf8518fb3d95892ed46",
+  measurementId: "G-D0QP7YBQDY",
 };
 
 export const app = firebase.initializeApp(firebaseConfig);

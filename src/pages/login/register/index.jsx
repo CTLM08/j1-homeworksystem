@@ -6,7 +6,6 @@ import { auth, firestore } from "../../../firebase";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
   const [userName, setUserName] = useState("");
   const signInWithEmail = () => {
     createUserWithEmailAndPassword(auth, email, password)
@@ -15,25 +14,10 @@ const Register = () => {
         await setDoc(doc(firestore, "user", user.uid), {
           username: userName,
           email: email,
-        });
+        })
       })
       .catch((err) => {
         throw err;
-        const errorCode = err.code;
-        switch (errorCode) {
-          case "auth/email-already-in-use":
-            setError("email already in use");
-            break;
-          case "auth/invalid-email":
-            setError("invalid email");
-            break;
-          case "auth/weak-password":
-            setError("weak password");
-            break;
-          default:
-            setError("something went wrong");
-            break;
-        }
 
         // ..
       });

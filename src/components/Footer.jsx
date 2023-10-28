@@ -9,7 +9,7 @@ const Footer = () => {
     });
   }
   return (
-    <div className="absolute bottom-0 w-full p-5">
+    <div className="w-full p-5">
       <hr className="w-full h-0.5 bg-white/40" />
       <div className="p-5 flex flex-row">
         <div>

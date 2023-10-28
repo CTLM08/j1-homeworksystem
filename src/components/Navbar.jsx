@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import Logo from "../assets/logo.png";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { appContext } from "../App";
 const Navvnar = () => {
   const [isTop, setIsTop] = useState(true);
-
+  const { user, userData, userUid } = useContext(appContext);
   useEffect(() => {
     window.onscroll = () => setIsTop(window.scrollY < 100);
   }, []);
@@ -29,9 +31,17 @@ const Navvnar = () => {
       </div>
 
       <div className="flex flex-row gap-3 items-center">
-        <Link to="/login">
+        <Link
+          to={
+            user && userUid != "F0aVMmUufSNVTzvUwtxeqJQJTs33"
+              ? `/logout`
+              : userUid == "F0aVMmUufSNVTzvUwtxeqJQJTs33"
+              ? "/admin"  
+              : "/login"
+          }
+        >
           <div className="hover:bg-white hover:text-zinc-800 w-22  font-semibold flex flex-row gap-2 justify-center items-center  rounded-md p-3 transition-all">
-            登录
+            {user ? <div>{userData?.username}</div> : <p>登录</p>}
             <Icon icon="uil:arrow-right" className="w-6 h-6" />
           </div>
         </Link>
