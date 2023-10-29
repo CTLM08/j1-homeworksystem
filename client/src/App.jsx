@@ -12,6 +12,8 @@ import { useState } from "react";
 import LogOut from "./pages/logout";
 import Admin from "./pages/admin";
 import AddHomeWork from "./pages/AddHomeWork";
+import Readmore from "./pages/Readmore";
+import Students from "./pages/Students";
 
 export const appContext = createContext({
   navigate: () => {},
@@ -59,9 +61,10 @@ const App = () => {
             <Route path="/logout" element={<LogOut />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/addhomework" element={<AddHomeWork />} />
+            <Route path="/homework/:id" element={<Readmore />} />
+            <Route path='/Students' element={<Students /> }/>
           </Routes>
         </main>
-        <div className="h-8" />
         <Footer />
       </div>
     </appContext.Provider>

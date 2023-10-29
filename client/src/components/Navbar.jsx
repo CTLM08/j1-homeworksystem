@@ -18,15 +18,15 @@ const Navvnar = () => {
       }`}
     >
       <div className="flex flex-row gap-3 items-center w-80% font-bold">
-        <img src={Logo} className="w-16 h-16" />
-        初一新生作业缴交系统
+        <Link to='/' className="flex flex-row items-center gap-3"><img src={Logo} className="w-16 h-16" />
+        初一新生作业缴交系统</Link>
         <p>·</p>
         <Icon icon="devicon:javascript" className="w-7 h-7" />
         <p>·</p>
         <div className=" flex  items-center gap-8 w-40% ml-4">
           <button>未交作业</button>
           <button>学习</button>
-          <button>同学</button>
+          <Link to='/Students'><button>同学</button></Link>
         </div>
       </div>
 

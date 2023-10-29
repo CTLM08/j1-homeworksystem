@@ -46,11 +46,10 @@ const Home = () => {
           <div className="text-sm mt-5 leading-relaxed text-white/50">
             {doc.data().content}
           </div>
-          <button className="bg-[#7289da] font-semibold p-3 pl-4 pr-3 mt-5 rounded-md text-white flex flex-row items-center gap-1.5">
+          <button onClick={()=>navigate(`homework/${doc.id}`)} className="bg-[#7289da] font-semibold p-3 pl-4 pr-3 mt-5 rounded-md text-white flex flex-row items-center gap-1.5">
             查看作业
             <Icon icon="uil:arrow-right" className="w-6 h-6" />
           </button>
-          
         </div>
       ))}
       <div className="h-56"></div>
